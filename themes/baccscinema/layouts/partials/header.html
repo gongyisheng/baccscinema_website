@@ -1,0 +1,43 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="logo">
+                <a href="{{ relLangURL "/" }}">
+                    <img src="/logo.svg" alt="BACCS Cinema Logo">
+                    <span class="logo-text">BACCSCINEMA</span>
+                </a>
+            </div>
+
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="lang-current">
+                        {{ if in .Language.Lang "en" }}🇺🇸 English{{ else }}🇨🇳 中文{{ end }}
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="{{ relLangURL "/" }}" class="lang-option active">
+                            {{ if in .Language.Lang "en" }}🇺🇸 English{{ else }}🇨🇳 中文{{ end }}
+                        </a>
+                        {{ range .Translations }}
+                            <a href="{{ .Permalink }}" class="lang-option">
+                                {{ if in .Language.Lang "en" }}🇺🇸 English{{ else }}🇨🇳 中文{{ end }}
+                            </a>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <a href='{{ relref . "contact.md" }}' class="btn-contact">{{ i18n "contact_us" | default "Contact Us" }}</a>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href='{{ relref . "about.md" }}'>{{ i18n "about_us" | default "About us" }}</a></li>
+                <li><a href='{{ relref . "program.md" }}'>{{ i18n "program_screening" | default "Program and Screening" }}</a></li>
+                <li><a href='{{ relref . "community.md" }}'>{{ i18n "community" | default "Community" }}</a></li>
+                <li><a href='{{ relref . "press.md" }}'>{{ i18n "press" | default "Press" }}</a></li>
+                <li><a href='{{ relref . "collaboration.md" }}'>{{ i18n "collaboration" | default "Collaboration" }}</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
