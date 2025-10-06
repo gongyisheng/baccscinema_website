@@ -1,0 +1,25 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Hugo lock file
+.hugo_build.lock
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
