@@ -1,6 +1,6 @@
 <header class="site-header">
     <div class="header-container">
-        <div class="header-top">
+        <div class="header-logo-row">
             <div class="logo">
                 <a href="{{ relLangURL "/" }}">
                     <img src="/logo.svg" alt="BACCS Cinema Logo">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <nav class="main-nav">
+        <nav class="header-nav-row">
             <ul>
                 <li><a href='{{ relref . "about.md" }}'>{{ i18n "about_us" | default "About us" }}</a></li>
                 <li><a href='{{ relref . "program.md" }}'>{{ i18n "program_screening" | default "Program and Screening" }}</a></li>
