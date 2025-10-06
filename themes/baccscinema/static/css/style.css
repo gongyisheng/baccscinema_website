@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #d4ff00;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.site-header {
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation */
+.main-nav {
+    width: 100%;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-switcher {
+    position: relative;
+}
+
+.lang-current {
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+}
+
+.lang-current:hover {
+    opacity: 0.7;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #d4ff00;
+    border: 2px solid #000;
+    border-radius: 4px;
+    min-width: 140px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin-top: 0.25rem;
+}
+
+.language-switcher:hover .lang-dropdown {
+    display: block;
+}
+
+.lang-option {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.lang-option:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.lang-option.active {
+    font-weight: 600;
+    background-color: rgba(0,0,0,0.08);
+}
+
+/* Contact Button */
+.btn-contact {
+    background-color: #000;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+}
+
+.btn-contact:hover {
+    background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main-nav ul {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .header-container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .header-container {
+        gap: 0.75rem;
+    }
+
+    .header-top {
+        gap: 1rem;
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+    }
+
+    .main-nav {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+        font-size: 0.85rem;
+        padding-bottom: 0.25rem;
+        white-space: nowrap;
+    }
+
+    .lang-current {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .lang-dropdown {
+        min-width: 120px;
+    }
+
+    .lang-option {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .header-container {
+        gap: 0.5rem;
+    }
+
+    .main-nav ul {
+        gap: 0.75rem;
+        font-size: 0.8rem;
+    }
+}
