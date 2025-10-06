@@ -3,14 +3,16 @@ defaultContentLanguage = 'en-us'
 theme = 'baccscinema'
 
 [languages]
-  [languages.en-us]
-    languageCode = 'en-us'
+  [languages.'en-us']
+    languageCode = 'en-US'
     languageName = 'English'
     title = 'BACCS Cinema'
     weight = 1
+    contentDir = 'content'
 
-  [languages.zh-cn]
-    languageCode = 'zh-cn'
+  [languages.'zh-cn']
+    languageCode = 'zh-CN'
     languageName = '简体中文'
     title = 'BACCS 电影院'
     weight = 2
+    contentDir = 'content.zh-cn'
