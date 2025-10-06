@@ -1,3 +1,16 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+defaultContentLanguage = 'en-us'
+theme = 'baccscinema'
+
+[languages]
+  [languages.en-us]
+    languageCode = 'en-us'
+    languageName = 'English'
+    title = 'BACCS Cinema'
+    weight = 1
+
+  [languages.zh-cn]
+    languageCode = 'zh-cn'
+    languageName = '简体中文'
+    title = 'BACCS 电影院'
+    weight = 2
