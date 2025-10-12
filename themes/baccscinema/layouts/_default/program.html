@@ -1,0 +1,51 @@
+{{ define "extra-css" }}
+    <link rel="stylesheet" href="/css/program.css">
+{{ end }}
+
+{{ define "main" }}
+<main class="program-page">
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <h1 class="program-title">{{ .Title | upper }}</h1>
+        <p class="program-description">{{ .Params.description }}</p>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="marquee-row">
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+            </div>
+            <div class="marquee-row">
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+                <span class="marquee-item">⚫ LATEST SCREENING PROGRAMS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programs Grid -->
+    <section class="programs-section">
+        {{ range .Params.programs }}
+        <article class="program-card">
+            <div class="program-card-images">
+                {{ range .images }}
+                <div class="program-image">
+                    <img src="{{ . }}" alt="Program poster">
+                </div>
+                {{ end }}
+            </div>
+            <div class="program-card-content">
+                <h2 class="program-card-title">{{ .title }}</h2>
+                <p class="program-card-description">{{ .description }}</p>
+                <a href="{{ .link }}" class="btn-details">Details</a>
+            </div>
+        </article>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

@@ -1,0 +1,200 @@
+/* Program Page Styles */
+.program-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+/* Hero Section */
+.program-hero {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+}
+
+.program-title {
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.program-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--color-text);
+}
+
+/* Marquee Banner */
+.marquee-container {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 0.75rem 2rem;
+    margin: 2rem 0 3rem;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.marquee-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem 3rem;
+    justify-content: flex-start;
+}
+
+.marquee-row:nth-child(even) {
+    padding-left: 8rem;
+}
+
+.marquee-item {
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Programs Section */
+.programs-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Program Card */
+.program-card {
+    background-color: var(--color-text-inverse);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.program-card-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.program-card-images:has(.program-image:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.program-image {
+    aspect-ratio: 2/3;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.program-card-images:has(.program-image:only-child) .program-image {
+    aspect-ratio: 16/9;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.program-card-content {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-inverse);
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.program-card-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.program-card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.btn-details {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 0.7rem 2rem;
+    border-radius: var(--border-radius-pill);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive - Program Page */
+@media (max-width: 768px) {
+    .program-page {
+        padding: 0 1rem 3rem;
+    }
+
+    .program-hero {
+        padding: 2rem 1rem 1.5rem;
+    }
+
+    .program-title {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
+    .program-description {
+        font-size: 0.9rem;
+    }
+
+    .marquee-item {
+        font-size: 0.85rem;
+        padding: 0 2rem;
+    }
+
+    .program-card-images {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.75rem;
+        padding: 1rem 1rem 0;
+    }
+
+    .program-card-content {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+
+    .program-card-title {
+        font-size: 1.8rem;
+    }
+
+    .program-card-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-title {
+        font-size: 2rem;
+    }
+
+    .program-card-images {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card-title {
+        font-size: 1.5rem;
+    }
+}
